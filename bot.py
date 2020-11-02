@@ -38,4 +38,7 @@ async def on_message(message):
     if "!emojis" in message.content:
         await emoji_dump(message)
 
+    if "!gift" in message.content:
+        await message.channel.send("https://www.amazon.com/hz/wishlist/ls/1OOMA2I6EJA26?ref_=wl_share")
+
 client.run(TOKEN)
