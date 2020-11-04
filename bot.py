@@ -4,6 +4,7 @@ import os
 import discord
 from dotenv import load_dotenv
 import random
+import time
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -39,6 +40,21 @@ async def on_message(message):
         await emoji_dump(message)
 
     if "!gift" in message.content:
-        await message.channel.send("https://www.amazon.com/hz/wishlist/ls/1OOMA2I6EJA26?ref_=wl_share")
+        await message.channel.send("<https://www.amazon.com/hz/wishlist/ls/1OOMA2I6EJA26?ref_=wl_share>")
 
+    if "!onlyfans" in message.content:
+        await message.channel.send("onlyfans.com/ľ̸͓͕̒̊̽̏̒̚ ̸̘̟̤̒s̶̡̰̖̦͈̰̀̎̒̀̈́͆̔͛ș̷̺̟̟͊̐̌̓̄̋ṫ̸͇̠̻̹̝̪́̏͗͘h̶̩̗͓̬̻̓̿̂ ̷̟͔͖̊͘ ̵̖̝̤̌̏̆͌b̵̦͕̃̈́̽͝͠r̵̝̮̻̯̍͋̋͛̊͝ ̴͔̝̲̠͇̹̦̯́͆̈́̈̔͐ę̴̗͓̬̤̻̗̔̽̈́̋̀͛̐͜͠.. Error: Segmentation fault.")
+
+    if "!socials" in message.content:
+        await message.channel.send(content="Instagram: <https://www.instagram.com/lessthanbrie> \nTwitter: <https://www.twitter.com/lessthanbrie> \nTwitch: <https://twitch.tv/lessthanbrie>")
+        
+    if "!purge" in message.content:
+        msg = await message.channel.send("Purging all channels in 3 seconds...")
+        time.sleep(1)
+        await msg.edit(content="Purging all channels in 2 seconds...")
+        time.sleep(1)
+        await msg.edit(content="Purging all channels in 1 second...")
+        time.sleep(1)
+        await msg.edit(content="P̸̡͇̺̝͖͓̬̞̻̮̱̖̎̅ͅu̸͓̫̳͙̯̖͔̗̱͚̬̜͋͜ŗ̸͎͇͔͉͔͈̝̠̲̻̻͌͑̿̋̓͝g̵̛̼̰̼̩͉̱̜̣̮̻̝̃̊̆̔ḯ̴̫͔̘͉͗͂̃ņ̸̭̣͋͒̀̾́͛g̸̡̠̪̟̖͚̙̝͖͕̩̤̫̮̒͋̇̃̎ ̷̠̳̖̼̩̩̺̓̓̃̅͋̀́̉͑́͐̄͝å̶̢͚͎̭̗̱̻̥̝̩̼̫͈̆̂̿̿̒͆́̀͋̓̽̓̚̕ͅl̵͓͌l̷͍͉̦͉̣͓̬̮̞̙̤̍̋̂̓̅̂͒̃ ̶̺̗̰̪̖̩͚̗͕͎̲̋̄̇̈́̒͊̄c̷̜̯̯̪̰̬̣̝̹̫̮̰͎̃͜͝h̶̨̧̙̣͍̘̫͕͕̫̭̟͐́̃̋́́̋̏̐̾̕͠͝ͅȃ̷̜͖̱͇̙̮̠͚̓͆͠ņ̸̱̐͛̈́͌̃̐́̏̾̚͝n̷̛̯̯͂̀̃͑͋̌̉͒̌̽̓̈́̓͝e̷̡̢̛͎̺̻͖̫̙̪͈̙̹͑́̐̆̈́͜l̷̛̻͕͈̞̤͎̺̥̮͂̊̇͗͊̀͒̍͊̉͘͝͝͠s̶̢̡̢̞̮̮̻̩̼̫̳̖͇͒̈́͂͂̒̎͒͗͑")
+        
 client.run(TOKEN)
